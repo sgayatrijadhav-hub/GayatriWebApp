@@ -1,0 +1,10 @@
+- hosts: localhost
+  become: yes
+
+  tasks:
+
+    - name: Copy WAR file to Tomcat webapps directory
+
+      copy:
+        src: target/GayatriWebApp.war
+        dest: /opt/tomcat9/webapps/GayatriWebApp.war
